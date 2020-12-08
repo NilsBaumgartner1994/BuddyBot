@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 /**
  * This is the main entrypoint to your Probot app
  * @param { {app: import('probot').Application} } app
@@ -5,7 +7,14 @@
 
 function handlePushEvent(app, context){
   console.log("Wow its pushed ?");
-  app.log.info(context);
+  let contextId = context.id;
+  let repository = context.payload.repository;
+  let repositoryId = repository.id;
+
+  let filename = "push";
+  filename+="_"+contextId;
+  filename+=".json";
+  fs.writeFileSync(filename, context);
 }
 
 module.exports = ({ app }) => {
