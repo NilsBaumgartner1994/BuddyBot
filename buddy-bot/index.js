@@ -7,9 +7,7 @@ const fs = require("fs");
 
 function handlePushEvent(app, context){
   console.log("Wow its pushed ?");
-  let keys = Object.keys(context);
-  console.log(keys);
-
+  
   let contextId = context.id;
   let payload = context.payload;
   let repository = payload.repository;
@@ -19,8 +17,10 @@ function handlePushEvent(app, context){
   filename+="_"+contextId;
   filename+=".json";
 
+  let data = JSON.stringify(context);
+
   console.log("Save Event to File: "+filename);
-  fs.writeFileSync(filename, payload);
+  fs.writeFileSync(filename, data);
 }
 
 module.exports = ({ app }) => {
