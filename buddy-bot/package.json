@@ -2,7 +2,7 @@
   "name": "buddy-bot",
   "version": "1.0.0",
   "private": true,
-  "description": "Bot to help to improve your code",
+  "description": "Helps to improve your code over time",
   "author": "Nils Baumgartner <nilsbaumgartner1994@gmail.com>",
   "license": "ISC",
   "repository": "https://github.com/NilsBaumgartner1994/buddy-bot.git",

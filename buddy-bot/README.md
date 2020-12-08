@@ -1,6 +1,6 @@
 # buddy-bot
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that Bot to help to improve your code
+> A GitHub App built with [Probot](https://github.com/probot/probot) that Helps to improve your code over time
 
 ## Setup
 
