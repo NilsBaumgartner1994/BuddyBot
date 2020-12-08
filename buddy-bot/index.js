@@ -8,13 +8,14 @@ const fs = require("fs");
 function handlePushEvent(app, context){
   console.log("Wow its pushed ?");
   let contextId = context.id;
-  let repository = context.payload.repository;
+  let payload = context.payload;
+  let repository = payload.repository;
   let repositoryId = repository.id;
 
   let filename = "push";
   filename+="_"+contextId;
   filename+=".json";
-  fs.writeFileSync(filename, context);
+  fs.writeFileSync(filename, payload);
 }
 
 module.exports = ({ app }) => {
